@@ -1,0 +1,1 @@
+(()=>{let a={openModalBtn:document.querySelector("[data-modal-about-open]"),closeModalBtn:document.querySelector("[data-modal-about-close]"),modal:document.querySelector("[data-modal-about]")};function b(){a.modal.classList.toggle("modal-hidden")}a.openModalBtn.addEventListener("click",b),a.closeModalBtn.addEventListener("click",b)})()

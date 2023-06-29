@@ -1,0 +1,231 @@
+.about {
+    background-color: $background-second-color;
+
+    .section__title {
+        margin-bottom: 32px;
+
+        @media screen and(min-width:768px) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and(min-width:1200px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    background-image: url(../images/mobile/about/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/mobile/about/about-bg@2x.png);
+    }
+
+    @media screen and(min-width:768px) {
+        background-image: url(../images/desktop/about/about-bg.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/desktop/about/about-bg@2x.png);
+        }
+    }
+
+    @media screen and(min-width:1200px) {
+        background-image: url(../images/desktop/about/about-bg.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/desktop/about/about-bg@2x.png);
+        }
+    }
+}
+
+.section__suptitle{
+    margin-bottom: 15px;
+}
+
+.about__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    gap: 40px;
+    @media screen and (min-width:768px) {
+        gap: 32px;
+        flex-direction: row;
+    }
+
+    @media screen and (min-width:1200px) {
+        gap: 100px;
+        align-items: center;
+    }
+}
+
+.about__text{
+    max-width: 220px;
+    @include font($fw: 500, $fs: 12px, $lh: 19px);
+    color: $secondary-text-color;
+    margin-bottom: 20px;
+
+    &--black{
+        margin-bottom: 40px;
+    }
+    &--gray{
+        @include font($fw: 500, $fs: 12px, $lh: 19px);
+        color: $primary-text-color;
+    }
+
+    @media screen and (min-width:768px) {
+        max-width: 335px;
+        @include font($fw: 500, $fs: 14px, $lh: 25px);
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width:1200px){
+        max-width: 464px;
+        @include font($fw: 500, $fs: 16px, $lh: 28px);
+        margin-bottom: 30px;
+
+        &--gray{
+            @include font($fw: 500, $fs: 14px, $lh: 27px);
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+.modal__btn_about{
+    color: $accent-red-color;
+    background-color: $background-primary-color;
+    
+    
+    &:hover,
+    &:focus {
+        background-color: $hover-background-color;
+    
+    }
+    @media screen and (max-width: 767px) {
+        padding: 11.5px 32px;
+    }
+}
+
+.btn-icon-about {
+    color: $background-primary-color;
+}
+
+.backdrop.modal-hidden .modal__about-window {
+    transform: translate(-50%, -50%) scale(0.25);
+}
+
+.modal__about_wrap {
+    height: 360px;
+    padding: 25px;
+    overflow-y: auto;
+
+}
+
+.modal__about_window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+
+    min-width: 310px;
+    height: 450px;
+    border-radius: 24px;
+
+    background-repeat: no-repeat;
+    background-color: $background-primary-color;
+
+    background-image: url(../images/mobile/about/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 4px 29px 40px -5px rgb(154 46 48 / 70%);
+    
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/mobile/about/about-bg@2x.png);
+    }
+    
+    @media screen and(min-width:768px) {
+        background-image: url(../images/desktop/about/about-bg.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/desktop/about/about-bg@2x.png);
+        }
+    }
+    
+    @media screen and(min-width:1200px) {
+        background-image: url(../images/desktop/about/about-bg.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/desktop/about/about-bg@2x.png);
+        }
+    }
+}
+
+.modal__about_title{
+    font-family: 'Titan One';
+    @include font($fs: 15px, $lh: 14px);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: $accent-red-color;
+    
+    @media screen and (min-width:768px) {
+        @include font($fs: 18px, $lh: 16px);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        @include font($fs: 24px, $lh: 23px);
+    }
+}
+
+.modal__about_list{
+    padding-left: 20px;
+    @include font($fs: 12px, $lh: 14px);
+    color: $accent-red-color;
+    margin-bottom: 20px;
+    list-style: decimal;
+    
+    @media screen and (min-width:768px) {
+        @include font($fs: 14px, $lh: 16px);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        @include font($fs: 20px, $lh: 23px);
+    }
+}
+
+.modal__about_text {
+    @include font($fs: 12px, $lh: 14px);
+    color: $accent-red-color;
+
+    @media screen and (min-width:768px) {
+        @include font($fs: 14px, $lh: 16px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include font($fs: 20px, $lh: 23px);
+    }
+}

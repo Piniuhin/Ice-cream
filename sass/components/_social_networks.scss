@@ -1,0 +1,24 @@
+.contacts-block__social-media {
+    display: flex;
+    gap: 28px;
+}
+
+.social-media__item {
+    display: flex;
+}
+
+.social-media__link {
+    text-decoration: none;
+}
+
+.social-media__icon {
+    width: 32px;
+    height: 32px;
+    fill: #FEA5BB;
+    transition: fill 250ms linear;
+
+    .social-media__link:hover &,
+    .social-media__link:focus & {
+        fill: #D41342;
+    }
+}

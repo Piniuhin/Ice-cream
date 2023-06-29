@@ -1,0 +1,1 @@
+(()=>{let a={openModalBtn:document.querySelector("[data-mapfr-open]"),closeModalBtn:document.querySelector("[data-mapfr-close]"),modal:document.querySelector("[data-mapfr]")};function b(){a.modal.classList.toggle("modal-hidden")}a.openModalBtn.addEventListener("click",b),a.closeModalBtn.addEventListener("click",b)})()

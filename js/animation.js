@@ -1,0 +1,1 @@
+function onEntry(a){a.forEach(a=>{a.isIntersecting&&a.target.classList.add("element-show")})}let options={threshold:[.5]},observer=new IntersectionObserver(onEntry,options),elements=document.querySelectorAll(".element-animation");for(let elm of elements)observer.observe(elm)

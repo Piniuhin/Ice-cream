@@ -1,0 +1,371 @@
+.section-contacts {
+    background-image: linear-gradient(to bottom,
+            $background-primary-color 23%,
+            $background-second-color 23%);    
+
+}
+    .places__name,
+    .places__name-foodtrack {
+        @include font(500, 12px, 22px);
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 25px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+    .places__name{
+        background:$background-modal-color;
+        border-radius: 4px;
+        width: 80px;
+        color: $background-primary-color;
+    
+    }
+    
+    .places__name-foodtrack{
+        background: $background-green-color;
+        color: $background-primary-color;
+        width: 130px;
+    
+    }
+
+    .places__city{
+        
+        text-align: left;
+        margin-bottom: 8px;
+        @include font(500, 12px, 22px); 
+        color: $secondary-text-color;
+    }
+
+    .places__text{
+        text-align: left;
+        @include font(500, 12px, 18px);
+        font-weight: 500;
+        color: $primary-text-color;
+    }
+
+    .name::after,
+    .days::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        left: 0;
+        bottom: -24px;
+           
+        border: 1px solid $border-color;
+    }
+
+    .name{
+        position: relative;
+        margin-bottom: 48px;
+    }
+
+    .days{
+        margin-bottom: 48px;
+        position: relative;
+    }
+
+    .schedule {
+        margin-bottom: 8px;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .schedule__day{
+        @include font(500, 12px, 22px);
+        color: $secondary-text-color;
+    }
+
+    .schedule__time{
+        @include font(500, 12px, 22px);
+        color: $rose-text-color;
+    }
+
+    .contacts-card__link{
+        color: $primary-text-color;
+        transition: color 250ms linear;
+
+        &:hover,
+        &:focus {
+            color: $accent-red-color;
+        }
+    }
+
+    .contacts-card__tel,
+    .contacts-card__mail {
+        @include font(500, 12px, 18px);       
+    }
+
+    .contacts-card__mail{        
+        color: $primary-text-color;
+    }
+
+    .info__item{ 
+       margin-left: auto;
+        margin-right: auto;
+        background-color:$background-primary-color;
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+    }
+
+    .modal__btn_contacts {
+        color: $background-primary-color;
+        background-color: #D41342;
+        
+        &:hover,
+        &:focus{
+            background-color:$rose-text-color;    
+        }
+    }
+
+    .btn-icon-contacts{
+        fill:   $background-primary-color;
+    
+    }
+
+    .btn{
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal__btn_franchise{
+        color: $accent-red-color;
+        background-color: $background-primary-color;
+        border:1px solid $background-rose-color;
+
+        &:hover,
+        &:focus {
+            background-color: $hover-background-color;
+            
+        }
+    }
+
+@media screen and (max-width: 767px){
+    .modal__btn_contacts {
+        padding: 11.5px 13px;
+    }
+    .modal__btn_franchise {
+        padding: 11.5px 32px;
+    }
+    .btn__1 {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .info__item{
+        width: 280px;
+        margin-bottom: 20px;
+        padding:40px 50px 40px 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .section-contacts {
+        background-image: linear-gradient(to bottom,
+                $background-primary-color 46%,
+                $background-second-color 46%);
+    }
+
+   
+
+    .name{
+        margin-bottom: 64px;
+    }
+
+    .info{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .info__item{
+        padding-left: 0;
+        padding-right: 0;
+        
+        margin-right: 32px;
+        width: 100%;
+        padding:40px 32px;
+    }
+
+    .info__item:last-child{
+        margin-right: 0;
+    }
+
+    .places__name,
+    .places__name-foodtrack{
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 1.86;
+        height: 28px;
+        padding: 0 15px;
+    }
+
+    .places__city{
+        margin-bottom: 12px;
+        line-height: 1.86;
+    }
+
+    .places__text{
+        
+        font-size: 14px;
+        line-height: 1.66;
+    }
+
+    .name::after{
+        bottom: -32px;
+    }
+
+    .schedule{
+        margin-bottom: 12px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .schedule__day{
+        font-size: 14px;
+        line-height: 1.86;
+    }
+
+    .schedule__time{
+        font-size: 14px;
+        line-height: 1.86;
+    }
+
+    .days{
+        margin-bottom: 64px;
+    }
+
+    .days::after {
+        bottom: -32px;
+        
+    }
+
+    .contacts-card__tel,
+    .contacts-card__mail{
+        font-size: 14px;
+        line-height: 1.83;
+    }
+
+    .btn{
+        flex-direction: row;
+        margin-top: 60px;   
+    }
+
+    .btn__1{
+        margin-right: 15px;
+        
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+   
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .contacts-container {
+        width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .section-contacts {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1200px){
+.section-contacts {
+    background-image: linear-gradient(to bottom,
+            $background-primary-color 19%,
+            $background-second-color 19%);
+
+}
+
+    .info__item{
+        width: 100%;
+        padding: 40px 60px 40px 40px;
+    }
+
+    .places__name{
+        font-size: 16px;
+    }
+
+    .places__city{
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .places__text {
+        @include font (500, 16px, 29px);
+        color: $primary-text-color;
+    }
+
+    .schedule__day {
+        @include font (500, 16px, 30px);
+        color: $secondary-text-color;
+    }
+    
+    .schedule__time {
+        @include font (500, 16px, 26px);
+        color: $rose-text-color;
+    }
+
+    .contacts-card__tel,
+    .contacts-card__mail {
+        @include font (500, 16px, 29px);
+        color: $primary-text-color;
+    }
+
+    .modal__btn_contacts,
+    .modal__btn_franchise {
+        @include font (700, 16px, 21px);
+        text-align: center;
+        align-content: baseline;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal__btn_contacts {
+        min-width: 198px;
+        color: $background-primary-color;
+    }
+
+    .modal__btn_franchise{
+        color: $accent-red-color;
+        min-width: 168px;   
+    }
+
+    .btn-icon-contacts{
+        width: 10px;
+        height: 10px;
+        display: flex;
+        align-items: baseline;
+        color: $background-primary-color;
+    }
+
+    .btn__1 {
+        margin-right: 12px;
+    
+    
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

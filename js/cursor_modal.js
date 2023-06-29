@@ -1,0 +1,1 @@
+(()=>{let a={openModalBtn:document.querySelector("[data-cursormodal-open]"),closeModalBtn:document.querySelector("[data-modal-close]"),modal:document.querySelector("[data-cursormodal]")};function b(){a.modal.classList.toggle("modal-hidden")}a.openModalBtn.addEventListener("click",b)})()
